@@ -1,5 +1,10 @@
-a=2
-b=1
-a=b
-a=2
-a=3
+import torch
+
+import os
+import sys
+
+out = sys.stdout
+sys.stdout = open("help.txt", "w")
+help(torch)
+sys.stdout.close()
+sys.stdout = out
